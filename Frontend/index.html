@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Attendance Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>School Attendance Management</h1>
+
+    <div class="controls">
+      <div class="date-section">
+        <label>Select Date:</label>
+        <input type="date" id="dateInput" />
+        <button onclick="searchAttendance()">Search</button>
+      </div>
+      <button onclick="fetchReport()">Fetch Attendance Report</button>
+    </div>
+
+    <div id="message"></div>
+
+    <div id="attendanceForm" class="hidden">
+      <div id="studentList"></div>
+      <button class="btn-submit" onclick="submitAttendance()">
+        Mark Attendance
+      </button>
+    </div>
+
+    <div id="summary" class="hidden"></div>
+    <div id="report" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
